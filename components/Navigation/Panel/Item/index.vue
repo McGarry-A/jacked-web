@@ -1,13 +1,12 @@
 <template>
-  <li class="w-full">
-    <NuxtLink :to="slug" :title="slug" class="flex items-center gap-2 p-2 border rounded-lg border-slate-300">
-      <Icon
-        :name="icon"
-        size="24"
-        class="text-slate-600"
+  <li class="@container w-full hover:bg-surface-elevation-low hover:font-bold hover:text-brand" :class="[ isActive ? 'bg-surface-elevation-low font-bold text-brand' : 'text-subtle' ]">
+    <NuxtLink :to="slug" :title="slug" class="flex items-center gap-4 p-2 rounded-lg justify-center @[100px]:justify-start">
+      <BaseIcon
+        :icon="icon"
+        class="text-2xl text-inherit"
       />
 
-      <h5 class="text-lg text-slate-600">
+      <h5 class="text-md hidden @[200px]:block transition-all">
         {{ label }}
       </h5>
     </NuxtLink>
@@ -21,5 +20,14 @@ interface IProps {
     slug: string
 }
 
-defineProps<IProps>()
+const props = defineProps<IProps>()
+
+const route = useRoute()
+const isActive = ref(false)
+const checkActive = () => {
+  if (route.path === props.slug) { isActive.value = true }
+}
+onMounted(() => {
+  checkActive()
+})
 </script>

@@ -3,10 +3,37 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        primary: ['Lora, sans-serif'],
-        secondary: ['Lato, sans-serif']
+        primary: ['Poppins, sans-serif'],
+        secondary: ['Poppins, sans-serif']
+      },
+
+      colors: {
+        brand: 'var(--brand)',
+        secondary: 'var(--secondary)',
+        clear: 'var(--clear)',
+        subtle: 'var(--subtle)',
+        'inverse-clear': 'var(--inverse-clear)',
+        'inverse-subtle': 'var(--inverse-subtle)',
+
+        surface: {
+          bg: 'var(--surface-bg)',
+          'elevation-low': 'var(--surface-elevation-low)',
+          'elevation-high': 'var(--surface-elevation-high)'
+        },
+
+        foreground: {
+          disabled: 'var(--forground-disabled)'
+        },
+
+        core: {
+          win: 'var(--core-win)',
+          loss: 'var(--core-loss)',
+          draw: 'var(--core-draw)',
+          'yellow-card': 'var(--core-yellow)',
+          focus: 'var(--focus)'
+        }
       }
     }
   },
-  plugins: []
+  plugins: [require('@tailwindcss/container-queries')]
 }

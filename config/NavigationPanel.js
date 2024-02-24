@@ -1,8 +1,8 @@
 export const listItems = [
   {
-    label: 'Home',
+    label: 'Dashboard',
     slug: '/',
-    icon: 'material-symbols:other-houses'
+    icon: 'material-symbols:dashboard'
   },
   {
     label: 'Workouts',
@@ -28,5 +28,23 @@ export const listItems = [
     label: 'Exercises',
     slug: '/exercises',
     icon: 'material-symbols:format-list-bulleted-rounded'
+  }
+]
+
+export const secondaryListItems = [
+  {
+    label: 'Settings',
+    slug: '/settings',
+    icon: 'material-symbols:settings'
+  },
+  {
+    label: 'Notifications',
+    slug: '/notifications',
+    icon: 'material-symbols:notifications'
+  },
+  {
+    label: 'Pricing',
+    slug: '/pricing',
+    icon: 'material-symbols:attach-money-rounded'
   }
 ]

@@ -6,4 +6,40 @@
     :root {
         @apply font-secondary
     }
+
+    :root,
+    .light {
+        --brand: theme("colors.indigo.500");
+        --secondary: theme("colors.indigo.600");
+        --surface-disabled: theme("colors.gray.400");
+        --dim: theme("colors.gray.500");
+    
+        --forground-disabled: theme("colors.gray.500");
+    
+        --core-win: theme("colors.green.600");
+        --core-loss: theme("colors.red.600");
+        --core-draw: theme("colors.gray.400");
+        --core-yellow-card: theme("colors.yellow.400");
+        --focus: theme("colors.yellow.400");
+    
+        --surface-bg: theme("colors.white");
+        --surface-elevation-low: theme("colors.gray.100");
+        --surface-elevation-high: theme("colors.indigo.800");
+    
+        --clear: theme("colors.gray.900");
+        --subtle: theme("colors.gray.400");
+        --inverse-subtle: theme("colors.gray.200");
+        --inverse-clear: theme("colors.white");
+      }
+    
+      .dark {
+        --surface-bg: theme("colors.gray.800");
+        --surface-elevation-low: theme("colors.gray.900");
+        --surface-elevation-high: theme("colors.gray.950");
+    
+        --clear: theme("colors.white");
+        --subtle: theme("colors.gray.200");
+        --inverse-subtle: theme("colors.gray.800");
+        --inverse-clear: theme("colors.gray.50");
+      }
 }

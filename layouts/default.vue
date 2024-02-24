@@ -1,5 +1,5 @@
 <template>
-  <div class="flex h-full ">
+  <div class="flex h-full">
     <NavigationPanel />
     <main>
       <NavigationHeader />

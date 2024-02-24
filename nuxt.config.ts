@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     ['@nuxtjs/google-fonts', {
       families: {
         Lato: [400, 700],
-        Lora: [500, 600, 700]
+        Lora: [500, 600, 700],
+        Poppins: true
       }
     }
     ]
