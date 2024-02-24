@@ -1,12 +1,12 @@
 <template>
   <li class="@container w-full hover:bg-surface-elevation-low hover:font-bold hover:text-brand" :class="[ isActive ? 'bg-surface-elevation-low font-bold text-brand' : 'text-subtle' ]">
-    <NuxtLink :to="slug" :title="slug" class="flex items-center gap-4 p-2 rounded-lg justify-center @[100px]:justify-start">
+    <NuxtLink :to="slug" :title="slug" class="flex items-center gap-4 p-2 rounded-lg" :class="[navPanelOpen ? 'justify-start' : 'justify-center']">
       <BaseIcon
         :icon="icon"
         class="text-2xl text-inherit"
       />
 
-      <h5 class="text-md hidden @[200px]:block transition-all">
+      <h5 v-if="navPanelOpen" class="transition-all text-md">
         {{ label }}
       </h5>
     </NuxtLink>
@@ -21,6 +21,8 @@ interface IProps {
 }
 
 const props = defineProps<IProps>()
+const uiStore = useUiStore()
+const { navPanelOpen } = storeToRefs(uiStore)
 
 const route = useRoute()
 const isActive = ref(false)

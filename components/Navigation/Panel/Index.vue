@@ -1,6 +1,6 @@
 <template>
   <aside
-    class="@container relative flex flex-col w-full h-full min-h-screen gap-8 transition-all duration-300 ease-in-out border shadow-lg bg-surface-bg text-clear pt-12"
+    class="@container relative flex flex-col w-full h-full min-h-screen gap-8 transition-all duration-150 ease-in-out border shadow-lg bg-surface-bg text-clear pt-12"
     :class="[navPanelOpen ? 'max-w-xs p-4' : 'max-w-24 p-0']"
   >
     <BaseButton v-if="!navPanelOpen" class="py-2 hover:bg-surface-elevation-low hover:font-bold" @click="toggleNavPanel()">
@@ -12,8 +12,8 @@
     </BaseButton>
 
     <div class="flex items-center justify-between w-full">
-      <BaseLogo class="flex items-start w-full @[150px]:w-auto" />
-      <BaseButton class="items-center justify-center p-1 rounded-lg bg-surface-elevation-low hidden @[100px]:flex" @click="toggleNavPanel()">
+      <BaseLogo class="flex items-start w-full" :class="{ navPanelOpen: 'w-auto' }" />
+      <BaseButton v-if="navPanelOpen" class="items-center justify-center p-1 rounded-lg bg-surface-elevation-low hidden @[100px]:flex" @click="toggleNavPanel()">
         <BaseIcon
           icon="material-symbols:arrow-back"
           size="22"
