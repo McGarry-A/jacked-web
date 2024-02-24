@@ -8,11 +8,11 @@
 <script setup lang="ts">
 const breadcrumbs = [
   {
-    label: 'Dashboard',
+    label: '💪🏽',
     slug: '/'
   },
   {
-    label: 'Widgets',
+    label: 'Dashboard',
     slug: '/'
   }
 ]

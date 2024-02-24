@@ -22,7 +22,7 @@
     </div>
 
     <div class="flex flex-col grow">
-      <GenericList class="w-full grow">
+      <GenericList class="w-full gap-1 grow">
         <NavigationPanelItem v-for="item in listItems" :key="item.slug" :icon="item.icon" :label="item.label" :slug="item.slug" />
       </GenericList>
 

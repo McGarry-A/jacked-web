@@ -1,6 +1,6 @@
 <template>
-  <li class="w-full rounded hover:bg-surface-elevation-high hover:font-bold hover:text-brand-strong" :class="[ isActive ? 'bg-surface-elevation-high font-bold text-brand-strong' : 'text-subtle' ]">
-    <NuxtLink :to="slug" :title="slug" class="flex items-center gap-4 px-2 py-4 rounded-lg" :class="[navPanelOpen ? 'justify-start' : 'justify-center']">
+  <li class="w-full rounded hover:bg-surface-elevation-high hover:font-bold hover:text-brand-strong" :class="[ isActive ? 'bg-surface-elevation-high font-semibold text-brand-strong' : 'text-subtle' ]">
+    <NuxtLink :to="slug" :title="slug" class="flex items-center gap-4 p-2 rounded-lg" :class="[navPanelOpen ? 'justify-start' : 'justify-center']">
       <BaseIcon
         :icon="icon"
         class="text-2xl text-inherit"
@@ -25,11 +25,9 @@ const uiStore = useUiStore()
 const { navPanelOpen } = storeToRefs(uiStore)
 
 const route = useRoute()
-const isActive = ref(false)
-const checkActive = () => {
-  if (route.path === props.slug) { isActive.value = true }
-}
-onMounted(() => {
-  checkActive()
+
+const isActive = computed(() => {
+  if (route.path === props.slug) { return true }
+  return false
 })
 </script>
