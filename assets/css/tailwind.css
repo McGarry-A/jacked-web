@@ -25,8 +25,8 @@
         --focus: theme("colors.yellow.400");
     
         --surface-bg: theme("colors.white");
-        --surface-elevation-low: theme("colors.gray.100");
-        --surface-elevation-high: theme("colors.indigo.800");
+        --surface-elevation-low: theme("colors.gray.200");
+        --surface-elevation-high: theme("colors.gray.300");
     
         --clear: theme("colors.gray.900");
         --subtle: theme("colors.gray.400");
@@ -35,7 +35,7 @@
       }
     
       .dark {
-        --brand-strong: theme("colors.indigo.300");
+        --brand-strong: theme("colors.indigo.200");
         --brand-soft: theme("colors.indigo.700");
 
         --surface-bg: theme("colors.gray.800");
@@ -47,4 +47,10 @@
         --inverse-subtle: theme("colors.gray.800");
         --inverse-clear: theme("colors.gray.50");
       }
+}
+
+@layer utilities {
+    .h1 {
+        @apply text-clear font-semibold text-5xl font-primary
+    }
 }

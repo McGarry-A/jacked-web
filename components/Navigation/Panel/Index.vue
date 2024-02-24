@@ -1,19 +1,18 @@
 <template>
   <aside
-    class="@container relative flex flex-col w-full h-full min-h-screen gap-8 transition-all duration-150 ease-in-out shadow-lg bg-surface-bg text-clear pt-12"
-    :class="[navPanelOpen ? 'max-w-xs p-4' : 'max-w-24 p-0']"
+    class="@container relative flex flex-col w-full h-full min-h-screen p-4 gap-8 transition-all duration-150 ease-in-out shadow-lg bg-surface-elevation-low text-clear pt-12"
+    :class="[navPanelOpen ? 'max-w-xs' : 'max-w-24']"
   >
-    <BaseButton v-if="!navPanelOpen" class="py-2 hover:bg-surface-elevation-low hover:font-bold" @click="toggleNavPanel()">
+    <BaseButton v-if="!navPanelOpen" class="py-2 rounded text-subtle bg-surface-elevation-high hover:font-bold" @click="toggleNavPanel()">
       <BaseIcon
         icon="material-symbols:arrow-forward"
         size="22"
-        class="text-subtle"
       />
     </BaseButton>
 
     <div class="flex items-center justify-between w-full">
       <BaseLogo class="flex items-start w-full" :class="{ navPanelOpen: 'w-auto' }" />
-      <BaseButton v-if="navPanelOpen" class="items-center justify-center p-1 rounded-lg bg-surface-elevation-low hidden @[100px]:flex" @click="toggleNavPanel()">
+      <BaseButton v-if="navPanelOpen" class="items-center justify-center p-2 rounded-lg bg-surface-elevation-high hidden @[100px]:flex" @click="toggleNavPanel()">
         <BaseIcon
           icon="material-symbols:arrow-back"
           size="22"
@@ -27,7 +26,7 @@
         <NavigationPanelItem v-for="item in listItems" :key="item.slug" :icon="item.icon" :label="item.label" :slug="item.slug" />
       </GenericList>
 
-      <GenericList class="justify-end w-full py-6 border-y border-y-subtle/50">
+      <GenericList class="justify-end w-full py-6 border-y border-y-subtle">
         <NavigationPanelItem v-for="item in secondaryListItems" :key="item.slug" :icon="item.icon" :label="item.label" :slug="item.slug" />
       </GenericList>
     </div>

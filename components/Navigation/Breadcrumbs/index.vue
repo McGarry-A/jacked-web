@@ -1,5 +1,5 @@
 <template>
-  <div class="flex px-8">
+  <div class="flex">
     <div v-for="(item, index) in links" :key="item.slug" class="text-sm text-subtle ">
       <NuxtLink :to="item.slug" :class="[index === 0 ? 'pr-3' : 'px-3']" class="transition-all duration-150 hover:text-brand">
         {{ item.label }}
@@ -14,7 +14,7 @@ interface IProps {
     links: {
         label: string,
         slug: string
-    }
+    }[]
 }
 
 defineProps<IProps>()

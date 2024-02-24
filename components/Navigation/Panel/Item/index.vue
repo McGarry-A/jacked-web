@@ -1,6 +1,6 @@
 <template>
-  <li class="w-full  hover:bg-surface-elevation-low hover:font-bold hover:text-brand" :class="[ isActive ? 'bg-surface-elevation-low font-bold text-brand-strong' : 'text-subtle' ]">
-    <NuxtLink :to="slug" :title="slug" class="flex items-center gap-4 p-2 rounded-lg" :class="[navPanelOpen ? 'justify-start' : 'justify-center']">
+  <li class="w-full rounded hover:bg-surface-elevation-high hover:font-bold hover:text-brand-strong" :class="[ isActive ? 'bg-surface-elevation-high font-bold text-brand-strong' : 'text-subtle' ]">
+    <NuxtLink :to="slug" :title="slug" class="flex items-center gap-4 px-2 py-4 rounded-lg" :class="[navPanelOpen ? 'justify-start' : 'justify-center']">
       <BaseIcon
         :icon="icon"
         class="text-2xl text-inherit"

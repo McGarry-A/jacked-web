@@ -9,7 +9,7 @@ export default defineNuxtConfig({
       families: {
         Lato: [400, 700],
         Lora: [500, 600, 700],
-        Poppins: true
+        Poppins: [400, 500, 600, 700]
       }
     }
     ]
