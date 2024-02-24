@@ -9,6 +9,8 @@ module.exports = {
 
       colors: {
         brand: 'var(--brand)',
+        'brand-strong': 'var(--brand-strong)',
+        'brand-soft': 'var(--brand-soft)',
         secondary: 'var(--secondary)',
         clear: 'var(--clear)',
         subtle: 'var(--subtle)',

@@ -1,5 +1,5 @@
 <template>
-  <li class="@container w-full hover:bg-surface-elevation-low hover:font-bold hover:text-brand" :class="[ isActive ? 'bg-surface-elevation-low font-bold text-brand' : 'text-subtle' ]">
+  <li class="w-full  hover:bg-surface-elevation-low hover:font-bold hover:text-brand" :class="[ isActive ? 'bg-surface-elevation-low font-bold text-brand-strong' : 'text-subtle' ]">
     <NuxtLink :to="slug" :title="slug" class="flex items-center gap-4 p-2 rounded-lg" :class="[navPanelOpen ? 'justify-start' : 'justify-center']">
       <BaseIcon
         :icon="icon"

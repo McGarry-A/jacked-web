@@ -46,5 +46,10 @@ export const secondaryListItems = [
     label: 'Pricing',
     slug: '/pricing',
     icon: 'material-symbols:attach-money-rounded'
+  },
+  {
+    label: 'Log Out',
+    slug: '/log-out',
+    icon: 'material-symbols:logout-rounded'
   }
 ]

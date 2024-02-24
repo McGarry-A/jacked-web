@@ -1,6 +1,6 @@
 <template>
   <aside
-    class="@container relative flex flex-col w-full h-full min-h-screen gap-8 transition-all duration-150 ease-in-out border shadow-lg bg-surface-bg text-clear pt-12"
+    class="@container relative flex flex-col w-full h-full min-h-screen gap-8 transition-all duration-150 ease-in-out shadow-lg bg-surface-bg text-clear pt-12"
     :class="[navPanelOpen ? 'max-w-xs p-4' : 'max-w-24 p-0']"
   >
     <BaseButton v-if="!navPanelOpen" class="py-2 hover:bg-surface-elevation-low hover:font-bold" @click="toggleNavPanel()">
