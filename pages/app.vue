@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div class="pb-4 border-b border-b-subtle">
-      <BaseHeading tag="h1">
+    <GenericPageHeading>
+      <template #heading>
         App
-      </BaseHeading>
-    </div>
+      </template>
+      <template #description>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </template>
+    </GenericPageHeading>
   </div>
 </template>
-
-<script setup lang="ts">
-</script>

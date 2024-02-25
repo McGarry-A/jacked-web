@@ -1,5 +1,5 @@
 <template>
-  <header class="flex items-center justify-between w-full pt-12 pb-7 bg-surface-bg">
+  <header class="flex items-center justify-between w-full pt-12 pb-6 bg-surface-bg">
     <NavigationBreadcrumbs :links="breadcrumbs" />
     <ThemeSwitcher />
   </header>

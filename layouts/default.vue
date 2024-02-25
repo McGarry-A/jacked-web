@@ -1,16 +1,16 @@
 <template>
-  <div class="flex h-full bg-surface-bg" :class="{'dark': !isLightMode}">
+  <div class="flex flex-col w-full min-h-screen bg-surface-bg" :class="{'dark': !isLightMode, 'pl-[320px]': navPanelOpen, 'pl-[100px]': !navPanelOpen}">
     <NavigationPanel />
-    <main class="w-full px-8">
-      <NavigationHeader class="" />
-      <NuxtPage class="w-full h-full" />
+    <main class="flex flex-col h-full px-8 grow">
+      <NavigationHeader />
+      <NuxtPage class="h-full grow" />
     </main>
   </div>
 </template>
 
 <script setup lang="ts">
 const uiStore = useUiStore()
-const { isLightMode } = storeToRefs(uiStore)
+const { isLightMode, navPanelOpen } = storeToRefs(uiStore)
 
 useHead({
   title: 'Jacked | Craft a Better You'
