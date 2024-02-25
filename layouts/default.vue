@@ -11,6 +11,8 @@
 <script setup lang="ts">
 const uiStore = useUiStore()
 const { isLightMode, navPanelOpen } = storeToRefs(uiStore)
+const user = useSupabaseUser()
+console.log(user)
 
 useHead({
   title: 'Jacked | Craft a Better You'
