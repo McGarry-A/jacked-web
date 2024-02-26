@@ -21,9 +21,7 @@
           <th scope="col" class="px-6 py-3">
             PRs
           </th>
-          <th scope="col" class="px-6 py-3">
-            ❤️
-          </th>
+          <th scope="col" class="px-6 py-3" />
         </tr>
       </thead>
       <tbody>
@@ -46,7 +44,11 @@
           <td class="px-6 py-4">
             Laptop
           </td>
-          <td class="px-6 py-4" />
+          <td class="px-6 py-4">
+            <BaseButton class="px-4 py-2 font-semibold rounded bg-surface-elevation-high">
+              View Workout
+            </BaseButton>
+          </td>
         </tr>
         <tr class="border-b bg-surface-elevation-low border-b-subtle text-clear">
           <th scope="row" class="px-6 py-4 font-medium">
@@ -67,7 +69,11 @@
           <td class="px-6 py-4">
             Laptop
           </td>
-          <td class="px-6 py-4" />
+          <td class="px-6 py-4">
+            <BaseButton class="px-4 py-2 font-semibold rounded bg-surface-elevation-high">
+              View Workout
+            </BaseButton>
+          </td>
         </tr>
         <tr class="border-b bg-surface-elevation-low border-b-subtle text-clear">
           <th scope="row" class="px-6 py-4 font-medium ">
@@ -88,7 +94,11 @@
           <td class="px-6 py-4">
             Laptop
           </td>
-          <td class="px-6 py-4" />
+          <td class="px-6 py-4">
+            <BaseButton class="px-4 py-2 font-semibold rounded bg-surface-elevation-high">
+              View Workout
+            </BaseButton>
+          </td>
         </tr>
       </tbody>
     </table>
