@@ -1,6 +1,6 @@
 <template>
   <aside
-    class="@container fixed left-0 flex flex-col w-full max-h-screen p-4 gap-8 transition-all duration-150 ease-in-out bg-surface-elevation-low text-clear pt-12 h-full"
+    class="@container fixed left-0 flex flex-col w-full max-h-screen p-4 gap-8 transition-all duration-150 ease-in-out bg-surface-elevation-low text-clear pt-12 h-full shadow-md"
     :class="[navPanelOpen ? 'max-w-xs' : 'max-w-24']"
   >
     <BaseButton v-if="!navPanelOpen" class="py-2 rounded text-subtle bg-surface-elevation-high hover:font-bold" @click="toggleNavPanel()">
@@ -26,12 +26,13 @@
         <NavigationPanelItem v-for="item in listItems" :key="item.slug" :icon="item.icon" :label="item.label" :slug="item.slug" />
       </GenericList>
 
-      <GenericList class="justify-end w-full py-6 border-y border-y-subtle">
+      <GenericList class="justify-end w-full py-6 border-t border-y-subtle">
         <NavigationPanelItem v-for="item in secondaryListItems" :key="item.slug" :icon="item.icon" :label="item.label" :slug="item.slug" />
+        <NavigationPanelItem :icon="logOut.icon" :label="logOut.label" :action="userStore.signOut" />
       </GenericList>
     </div>
 
-    <UserBadge class="pb-6" />
+    <!-- <UserBadge class="pb-6" /> -->
   </aside>
 </template>
 
@@ -42,7 +43,14 @@ defineOptions({
   name: 'NavigationPanel'
 })
 
+const logOut = {
+  label: 'Log Out',
+  slug: '/log-out',
+  icon: 'material-symbols:logout-rounded'
+}
+
 const uiStore = useUiStore()
+const userStore = useUserStore()
 const { navPanelOpen } = storeToRefs(uiStore)
 const toggleNavPanel = uiStore.toggleNavPanel
 </script>

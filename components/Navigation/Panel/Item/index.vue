@@ -1,6 +1,12 @@
 <template>
   <li class="w-full rounded hover:bg-surface-elevation-high hover:font-bold hover:text-brand-strong" :class="[ isActive ? 'bg-surface-elevation-high font-semibold text-brand-strong' : 'text-subtle' ]">
-    <NuxtLink :to="slug" :title="slug" class="flex items-center gap-4 p-2 rounded-lg" :class="[navPanelOpen ? 'justify-start' : 'justify-center']">
+    <NuxtLink
+      :to="slug"
+      :title="slug"
+      class="flex items-center gap-4 p-2 rounded-lg cursor-pointer"
+      :class="[navPanelOpen ? 'justify-start' : 'justify-center']"
+      @click="action && action()"
+    >
       <BaseIcon
         :icon="icon"
         class="text-2xl text-inherit"
@@ -17,7 +23,8 @@
 interface IProps {
     icon: string,
     label: string,
-    slug: string
+    slug?: string,
+    action?: () => void,
 }
 
 const props = defineProps<IProps>()

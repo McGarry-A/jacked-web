@@ -15,6 +15,11 @@ export const listItems = [
     icon: 'material-symbols:lightbulb-rounded'
   },
   {
+    label: 'Exercises',
+    slug: '/exercises',
+    icon: 'material-symbols:format-list-bulleted-rounded'
+  },
+  {
     label: 'History',
     slug: '/history',
     icon: 'material-symbols:history-rounded'
@@ -23,11 +28,6 @@ export const listItems = [
     label: 'App',
     slug: '/app',
     icon: 'material-symbols:mobile-friendly-rounded'
-  },
-  {
-    label: 'Exercises',
-    slug: '/exercises',
-    icon: 'material-symbols:format-list-bulleted-rounded'
   }
 ]
 
@@ -46,10 +46,5 @@ export const secondaryListItems = [
     label: 'Pricing',
     slug: '/pricing',
     icon: 'material-symbols:attach-money-rounded'
-  },
-  {
-    label: 'Log Out',
-    slug: '/log-out',
-    icon: 'material-symbols:logout-rounded'
   }
 ]

@@ -5,8 +5,8 @@
       <span class="absolute bottom-0 right-0 w-4 h-4 bg-green-400 border-2 border-white rounded-full" />
     </div>
     <div class="@[150px]:flex h-full hidden w-full @[150px]:text-start @[150px]:justify-between items-center">
-      <h5 class="text-lg font-semibold text-clear">
-        Ahmed McGarry
+      <h5 class="text-clear text-wrap max-w-[210px] text-ellipsis overflow-hidden">
+        {{ user?.email }}
       </h5>
 
       <BaseIcon
@@ -19,4 +19,5 @@
 </template>
 
 <script lang="ts" setup>
+const user = useSupabaseUser()
 </script>

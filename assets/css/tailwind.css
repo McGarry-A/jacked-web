@@ -54,7 +54,15 @@
 }
 
 @layer utilities {
+    .h1, .h2 {
+        @apply text-clear font-semibold font-primary
+    }
+    
     .h1 {
-        @apply text-clear font-semibold text-5xl font-primary 
+        @apply text-5xl 
+    }
+
+    .h2 {
+        @apply text-3xl 
     }
 }

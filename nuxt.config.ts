@@ -23,7 +23,7 @@ export default defineNuxtConfig({
     key: process.env.SUPABASE_KEY,
     redirectOptions: {
       login: '/register',
-      callback: '/'
+      callback: '/register'
     }
   }
 })

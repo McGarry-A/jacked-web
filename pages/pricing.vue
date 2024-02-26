@@ -1,18 +1,15 @@
 <template>
-  <section class="h-full">
+  <div>
     <GenericPageHeading>
       <template #heading>
-        My Dashboard
+        Pricing
       </template>
       <template #description>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </template>
     </GenericPageHeading>
-
-    <div class="flex flex-row flex-wrap h-full gap-8 py-8">
-      <WidgetSessionFrequency />
-      <WidgetQuickStart class="lg:basis-[calc(50%-16px)]" />
-      <WidgetMaxEstimator class="lg:basis-[calc(50%-16px)]" />
-    </div>
-  </section>
+  </div>
 </template>
+
+<script setup lang="ts">
+</script>
